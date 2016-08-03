@@ -1,0 +1,10 @@
+version: '2'
+services:
+    gradle:
+        build: .
+        volumes:
+            - "../HuaWeiDigitalMeetingServer:/app"
+            - "~/.gradle:/gradle"
+        environment:
+            JAVA_OPTS: -Xmx4096m
+            GRADLE_USER_HOME: /gradle
